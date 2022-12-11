@@ -26,7 +26,7 @@
             } else {
         ?>
         Ingrese los elementos de la matriz A:
-        <table border="1" cellpadding="0" cellspacing="0" alt="tabla matriz A">
+        <table border="1" cellpadding="0" cellspacing="0" summary="tabla matriz A">
             <th>matriz A</th>
                 <tbody>
                     <tr align="center">
@@ -50,7 +50,7 @@
         </table>
         <br> Ingrese los elementos de la matriz B:
 
-        <table border="1" cellpadding="0" cellspacing="0" alt="tabla matriz B">
+        <table border="1" cellpadding="0" cellspacing="0" summary="tabla matriz B">
         <th>matriz B</th>
             <tbody>
                 <tr align="center">
