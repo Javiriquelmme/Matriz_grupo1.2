@@ -23,16 +23,17 @@
                 unset($_POST['columnas_a']);
                 unset($_POST['filas_b']);
                 unset($_POST['columnas_b']);
-            } else  {
+            } else {
         ?>
         Ingrese los elementos de la matriz A:
-        <table border="1" cellpadding="0" cellspacing="0">
-            <tbody>
-                <tr align="center">
-                    <td>&nbsp;&nbsp;<b>A</b>&nbsp;&nbsp;</td>
+        <table border="1" cellpadding="0" cellspacing="0" alt="tabla matriz A">
+            <th>matriz A</th>
+                <tbody>
+                    <tr align="center">
+                        <td>&nbsp;&nbsp;<strong>A</strong>&nbsp;&nbsp;</td>
 
 
-                    <?php
+                        <?php
                 for ($j = 0; $j < $columnas_a; $j++)
                     echo "<td><b>$j</b></td>";
                 echo '</tr>';
@@ -44,15 +45,16 @@
                     echo '</tr>';
                 }
                     ?>
-            </tbody>
+                </tbody>
+            
         </table>
         <br> Ingrese los elementos de la matriz B:
 
-        <table border="1" cellpadding="0" cellspacing="0">
-
+        <table border="1" cellpadding="0" cellspacing="0" alt="tabla matriz B">
+        <th>matriz B</th>
             <tbody>
                 <tr align="center">
-                    <td>&nbsp;&nbsp;<b>B</b>&nbsp;&nbsp;</td>
+                    <td>&nbsp;&nbsp;<strong>B</strong>&nbsp;&nbsp;</td>
 
 
                     <?php
@@ -66,38 +68,39 @@
 
                     echo '</tr>';
                 }
-            ?>
+                    ?>
             </tbody>
         </table>
         <?php
             }
         }
-	?>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>Ingrese el n&uacute;mero de filas de la matriz A :</td>
-                        <td><input name="filas_a" type="text" size="4"></td>
-                    </tr>
-                    <tr>
-                        <td>Ingrese el n&uacute;mero de columnas de la matriz A :</td>
-                        <td><input name="columnas_a" type="text" size="4"></td>
-                    </tr>
-                    <tr>
-                        <td>Ingrese el n&uacute;mero de filas de la matriz B :</td>
-                        <td><input name="filas_b" type="text" size="4"></td>
-                    </tr>
-                    <tr>
-                        <td>Ingrese el n&uacute;mero de columnas de la matriz B :</td>
-                        <td><input name="columnas_b" type="text" size="4"></td>
-                    </tr>
-                </tbody>
-            </table>
+        ?>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Ingrese el n&uacute;mero de filas de la matriz A :</td>
+                    <td><input name="filas_a" type="text" size="4"></td>
+                </tr>
+                <tr>
+                    <td>Ingrese el n&uacute;mero de columnas de la matriz A :</td>
+                    <td><input name="columnas_a" type="text" size="4"></td>
+                </tr>
+                <tr>
+                    <td>Ingrese el n&uacute;mero de filas de la matriz B :</td>
+                    <td><input name="filas_b" type="text" size="4"></td>
+                </tr>
+                <tr>
+                    <td>Ingrese el n&uacute;mero de columnas de la matriz B :</td>
+                    <td><input name="columnas_b" type="text" size="4"></td>
+                </tr>
+            </tbody>
+        </table>
 
 
 
-            <input type="submit" value="Continuar">
+        <input type="submit" value="Continuar">
         </table>
     </form>
 </body>
+
 </html>
