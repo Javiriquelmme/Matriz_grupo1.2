@@ -23,7 +23,7 @@
                 unset($_POST['columnas_a']);
                 unset($_POST['filas_b']);
                 unset($_POST['columnas_b']);
-            } else {
+            } else  {
         ?>
         Ingrese los elementos de la matriz A:
         <table border="1" cellpadding="0" cellspacing="0">
@@ -36,41 +36,40 @@
                 for ($j = 0; $j < $columnas_a; $j++)
                     echo "<td><b>$j</b></td>";
                 echo '</tr>';
-                for ($i = 0; $i < $fils_a; $i++) {
+                for ($i = 0; $i < $filas_a; $i++) {
                     echo "<tr align=\"center\"><td><b>$i</b></td>";
                     for ($j = 0; $j < $columnas_a; $j++)
                         echo '<td><input name="a[' . $i . '][' . $j . ']" type="text" size="4"></td>';
 
                     echo '</tr>';
                 }
-            }
                     ?>
             </tbody>
         </table>
         <br> Ingrese los elementos de la matriz B:
 
         <table border="1" cellpadding="0" cellspacing="0">
-            <table border="1" cellpadding="0" cellspacing="0">
-                <tbody>
-                    <tr align="center">
-                        <td>&nbsp;&nbsp;<b>B</b>&nbsp;&nbsp;</td>
+
+            <tbody>
+                <tr align="center">
+                    <td>&nbsp;&nbsp;<b>B</b>&nbsp;&nbsp;</td>
 
 
-                        <?php
+                    <?php
                 for ($j = 0; $j < $columnas_b; $j++)
                     echo "<td><b>$j</b></td>";
                 echo '</tr>';
                 for ($i = 0; $i < $filas_b; $i++) {
                     echo "<tr align=\"center\"><td><b>$i</b></td>";
                     for ($j = 0; $j < $columnas_b; $j++)
-                        echo '<td><input name="b[' . $k . '][' . $j . ']" type="text" size="4"></td>';
+                        echo '<td><input name="b[' . $i . '][' . $j . ']" type="text" size="4"></td>';
 
                     echo '</tr>';
-                
+                }
             ?>
-                </tbody>
-            </table>
-            <?php
+            </tbody>
+        </table>
+        <?php
             }
         }
 	?>
@@ -101,5 +100,4 @@
         </table>
     </form>
 </body>
-
 </html>
