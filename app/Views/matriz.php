@@ -126,7 +126,8 @@
         ?>
     
         Resultado:
-        <table border="1" cellpadding="0" cellspacing="0">
+        <table border="1" cellpadding="0" cellspacing="0" summary="resultados de la matriz">
+        <th>R</th>
             <tbody>
                 <?php
             for ($i = 0; $i < $filas_a; $i++) {
