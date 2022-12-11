@@ -24,7 +24,7 @@
                 unset($_POST['filas_b']);
                 unset($_POST['columnas_b']);
             } else {
-                echo "prueba";
+                echo "prueba2";
        
             }} ?>
             <table>
