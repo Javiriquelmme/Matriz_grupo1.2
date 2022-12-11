@@ -74,6 +74,7 @@
         <?php
             }
         }
+        if (!isset($_POST['filas_a']) || !isset($_POST['columnas_a']) || !isset($_POST['filas_b']) || !isset($_POST['columnas_b'])) {
         ?>
         <table>
             <tbody>
@@ -95,12 +96,34 @@
                 </tr>
             </tbody>
         </table>
-
+        <?php
+        }
+        ?>
 
 
         <input type="submit" value="Continuar">
         </table>
     </form>
+    <br>
+    <?php
+    if (isset($_POST['a']) && isset($_POST['b'])) {
+        $a = $_POST['a'];
+        $b = $_POST['b'];
+        $filas_a = count($a);
+        $columnas_a = count($a[0]);
+        $filas_b = count($b);
+        $columnas_b = count($b[0]);
+        $c = array();
+        for ($i = 0; $i < $filas_a; $i++) {
+            array_push($c, array());
+            for ($j = 0; $j < $columnas_b; $j++) {
+                array_push($c[$i], 0.0);
+                for ($k = 0; $k < $filas_b; $k++)
+                    $c[$i][$j] += $a[$i][$k] * $b[$k][$j];
+
+            }
+        }
+} ?>
 </body>
 
 </html>
