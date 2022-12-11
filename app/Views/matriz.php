@@ -121,9 +121,27 @@
                 for ($k = 0; $k < $filas_b; $k++)
                     $c[$i][$j] += $a[$i][$k] * $b[$k][$j];
 
+                }
             }
+        ?>
+    
+        Resultado:
+        <table border="1" cellpadding="0" cellspacing="0">
+            <tbody>
+                <?php
+            for ($i = 0; $i < $filas_a; $i++) {
+                echo '<tr align="center">';
+                for ($j = 0; $j < $columnas_b; $j++)
+                    echo '<td>&nbsp;&nbsp;' . $c[$i][$j] . '&nbsp;&nbsp;</td>';
+                echo '</tr>';
+            }
+                ?>
+    
+            </tbody>
+        </table>
+        <?php
         }
-} ?>
+        ?>
 </body>
 
 </html>
