@@ -1,4 +1,4 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,8 +10,23 @@
 
 <body>
     <form method="post">
+        <?php
+        if (isset($_POST['filas_a']) && isset($_POST['columnas_a']) && isset($_POST["filas_b"]) && isset($_POST["columnas_b"])) {
+            $filas_a = intval($_POST['filas_a']);
+            $columnas_a = intval($_POST['columnas_a']);
+            $filas_b = intval($_POST['filas_b']);
+            $columnas_b = intval($_POST['columnas_b']);
 
+            if ($filas_a < 1 || $columnas_a < 1 || $filas_b < 1 || $columnas_b < 1 || $columnas_a != $filas_b) {
+                echo 'Las matrices no se pueden multiplicar.<br><br>';
+                unset($_POST['filas_a']);
+                unset($_POST['columnas_a']);
+                unset($_POST['filas_b']);
+                unset($_POST['columnas_b']);
+            } else {
 
+       
+            }} ?>
             <table>
                 <tbody>
                     <tr>
@@ -32,28 +47,11 @@
                     </tr>
                 </tbody>
             </table>
-            <?php
 
-            ?>
+
+
             <input type="submit" value="Continuar">
+        </table>
     </form>
-
-                </tbody>
-            </table>
-            <?php
-
-
-
-
-        ?>
-
- <?php
-
-    ?>
-
-
-
-
-
 </body>
 </html>
