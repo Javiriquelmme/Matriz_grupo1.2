@@ -141,7 +141,8 @@
             </tbody>
         </table>
         <?php
-        }
+    }
+    echo 'prueba';
         ?>
 </body>
 
