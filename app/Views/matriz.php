@@ -92,8 +92,8 @@
                         <td>Ingrese el n&uacute;mero de columnas de la matriz B :</td>
                         <td><input name="columnas_b" type="text" size="4"></td>
                     </tr>
-                </tbody>
-            </table>
+                </tbody
+            </table
 
 
 
